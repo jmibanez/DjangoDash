@@ -1,5 +1,6 @@
 # Create your views here.
 from dash import models
+from dash.tweet import tweet_record
 
 from django.conf import settings
 from django.contrib.auth import login, authenticate
@@ -72,6 +73,7 @@ def record_run(request):
     rec.save()
 
     oauth_key = user.oauth_key
+    tweet_record(oauth_key, rec)
 
     return redirect(SHOW_RUN, run_id=rec.id)
 
