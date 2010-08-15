@@ -21,4 +21,14 @@ urlpatterns = patterns(
 
     (r'^$', 'dash.views.home'),
     (r'^home$', 'dash.views.home'),
+    (r'^record-run$', 'dash.views.record_run'),
+
+    (r'^my-runs/$', 'dash.views.get_runs'),
+    (r'^my-runs/on/(?P<run_date>\d{2}-\d{2}-\d{4})$', 'dash.views.show_runs_on'),
+    (r'^my-runs/(?P<run_id>[A-Za-z0-9]+)$', 'dash.views.show_run'),
+
+    (r'^users/(?P<user_id>\w+)$', 'dash.views.get_user'),
+    (r'^users/(?P<user_id>\w+)/runs$', 'dash.views.get_user_runs'),
+    (r'^users/(?P<user_id>\w+)/run/(?P<run_id>[A-Za-z0-9]+)$', 'dash.views.show_user_run'),
+    (r'^users/(?P<user_id>\w+)/runs-on/(?P<run_date>\d{2}-\d{2}-\d{4})$', 'dash.views.show_user_runs_on'),
 )
