@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}: Home{% endblock %}
+{% block content %}
+<p>Home</p>
+
+<form method="post" action="/record-run">
+  <input type="text" name="distance" id="distance" />
+  <input type="submit" value="Run" />
+</form>
+{% endblock %}

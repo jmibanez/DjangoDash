@@ -84,3 +84,15 @@ INSTALLED_APPS = (
     'djangotoolbox',
     'dash'
 )
+
+
+# OAuth consumer key/secret
+CONSUMER_KEY = '7wk2PNUCC8pCBLnJ1DBpLA'
+CONSUMER_SECRET = 'Dc7nnekyZwCvGr7U50rzQX1960RQ9sxPnEkqIRIrSmU'
+
+AUTHENTICATION_BACKENDS = (
+    'backends.twitteroauth.TwitterBackend',
+    'django.contrib.auth.backends.ModelBackend'
+)
+
+AUTH_PROFILE_MODULE = 'dash.RunnerUser'

@@ -15,4 +15,10 @@ urlpatterns = patterns(
 
     # Uncomment the next line to enable the admin:
     # (r'^admin/', include(admin.site.urls)),
+
+    (r'login', 'dash.views.oauth_login'),
+    (r'return', 'dash.views.oauth_return'),
+
+    (r'^$', 'dash.views.home'),
+    (r'^home$', 'dash.views.home'),
 )
